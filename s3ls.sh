@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# List s3 buckets ane their contents
+
 aws s3 ls | awk '{ print $NF }' | while read BUCKET
 do 
   echo -e "s3://${BUCKET}:"
